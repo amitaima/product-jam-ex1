@@ -9,6 +9,11 @@ List at list 2 challenges or dilemmas that you faced while building the design i
 and how you decided to solve them?
 
 **Answer:**
+Issue: How to build the top navbar so it stays at top and doesnt get scrolled away?
+Solution: I set poistion fixed to top and gave body a margin top of around the size of the top navbar
+
+Issue: How to get the drawer to open on click
+Solution:: created a class for open which showed the drawer and a class for closed which hid it and usig JS changed class of drawer.
 
 ## 2. Box model
 
@@ -21,6 +26,8 @@ Enable and disable `box-sizing: border-box;` and inspect the size of the element
 What is the total width, and why? Explain in detail.
 
 **Answer:**
+114px without, 100px with.
+makes the width be final after border and padding.
 
 ## 3. The viewport
 
@@ -35,3 +42,6 @@ What happens to your page? What does
 this line tell the browser, and why does removing it affect your mobile design?
 
 **Answer:**
+For me in my site it didnt change anything for some reason.
+But removing this line causes the mobile browser to treat your page as a desktop site, shrinking your layout to fit the screen and making the text tiny.
+It is what tells the browser the width of the screen to set page for that width.

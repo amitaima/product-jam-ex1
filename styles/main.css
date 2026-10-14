@@ -1,1 +1,153 @@
-/* Your styles go here */
+.topnav {
+  background-color: #333;
+  display: flex;
+  padding: 0.8rem 1.8rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-title {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  transition: all 0.3s;
+  border-radius: 1.6rem;
+  padding: 1rem 1.8rem;
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #2ca5796d;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04aa6dcf;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.hamburger img {
+  width: 1.8rem;
+  height: 1.8rem;
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #c8daf5;
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer.open {
+  display: flex;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.drawer-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.body-container {
+  max-width: 120rem;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.name-input-shit {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 36rem;
+}
+
+.name-input-shit input[type="text"] {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.name-input-shit button[type="submit"] {
+  padding: 0.8rem 1.6rem;
+  background-color: #3d5a99;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

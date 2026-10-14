@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
@@ -10,12 +10,46 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to my Website!</h1>
+      <div class="topnav">
+        <div class="navbar-title"><h2>אתר אינטרנט</h2></div>
+        <div class="navbar-links">
+          <a href="index.html" class="active">דף הבית</a>
+          <a href="elements.html">אלמנטים</a>
+          <a href="https://github.com/product-jam-2027/course/">הקורס</a>
+        </div>
+        <button class="hamburger" onclick="openDrawer()">
+          <img src="public/icons/menu.svg" />
+        </button>
+      </div>
     </header>
+
+    <div id="drawer" class="drawer">
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+      <nav class="drawer-nav">
+        <a href="index.html" onclick="closeDrawer()">דף הבית</a>
+        <a href="elements.html" onclick="closeDrawer()">אלמנטים</a>
+        <a
+          href="https://github.com/product-jam-2027/course/"
+          onclick="closeDrawer()"
+          >הקורס</a
+        >
+      </nav>
+    </div>
+
     <main>
-      <p>This is a paragraph.</p>
+      <div class="body-container">
+        <div class="top-text">
+          <h2>ברוכים הבאים לאתר האינטרנט שלי</h2>
+          <p>בלה בלה בלה</p>
+        </div>
+        <form action="#" class="name-input-shit">
+          <label for="name">איך קוראים לך?</label>
+          <input type="text" id="name" name="name" placeholder="שם פרטי" />
+          <button type="submit">בבקשה ללחוץ על הכפתור</button>
+        </form>
+      </div>
     </main>
 
-    <script type="module" src="/main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
