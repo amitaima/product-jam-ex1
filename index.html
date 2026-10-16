@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>אתר אינטרנט</title>
     <link href="/styles/reset.css" rel="stylesheet" />
     <link href="/styles/main.css" rel="stylesheet" />
   </head>
@@ -14,8 +14,8 @@
         <div class="navbar-title"><h2>אתר אינטרנט</h2></div>
         <div class="navbar-links">
           <a href="index.html" class="active">דף הבית</a>
+          <a href="about.html">אודות</a>
           <a href="elements.html">אלמנטים</a>
-          <a href="https://github.com/product-jam-2027/course/">הקורס</a>
         </div>
         <button class="hamburger" onclick="openDrawer()">
           <img src="public/icons/menu.svg" />
@@ -27,28 +27,58 @@
       <button class="drawer-close" onclick="closeDrawer()">✕</button>
       <nav class="drawer-nav">
         <a href="index.html" onclick="closeDrawer()">דף הבית</a>
+        <a href="about.html" onclick="closeDrawer()">אודות</a>
         <a href="elements.html" onclick="closeDrawer()">אלמנטים</a>
-        <a
-          href="https://github.com/product-jam-2027/course/"
-          onclick="closeDrawer()"
-          >הקורס</a
-        >
       </nav>
     </div>
 
     <main>
       <div class="body-container">
         <div class="top-text">
-          <h2>ברוכים הבאים לאתר האינטרנט שלי</h2>
-          <p>בלה בלה בלה</p>
+          <h2>ברוכים הבאים לאתר שלי</h2>
+          <p>כאן תוכלו למצוא מידע עליי ועל הפרויקטים שלי.</p>
         </div>
         <form action="#" class="name-input-shit">
           <label for="name">איך קוראים לך?</label>
           <input type="text" id="name" name="name" placeholder="שם פרטי" />
           <button type="submit">בבקשה ללחוץ על הכפתור</button>
         </form>
+        <h3 id="gallery-text" hidden>הנה כמה תמונות שצילמתי</h3>
+        <div id="gallery" class="gallery" hidden>
+          <div class="image-border">
+            <img src="/my-photos/1.jpeg" alt="תמונה 1" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/2.jpeg" alt="תמונה 2" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/3.jpeg" alt="תמונה 3" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/4.jpeg" alt="תמונה 4" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/5.jpeg" alt="תמונה 5" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/6.jpeg" alt="תמונה 6" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/7.jpeg" alt="תמונה 4" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/8.jpeg" alt="תמונה 5" loading="lazy" />
+          </div>
+          <div class="image-border">
+            <img src="/my-photos/9.jpeg" alt="תמונה 6" loading="lazy" />
+          </div>
+        </div>
       </div>
     </main>
+
+    <footer>
+      <p>Product Jam 2027</p>
+    </footer>
 
     <script src="/main.js"></script>
   </body>

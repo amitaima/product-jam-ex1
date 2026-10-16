@@ -1,8 +1,11 @@
-document.querySelector(".name-input-shit").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var name = document.getElementById("name").value;
-  alert("שלום, " + name);
-});
+var nameInput = document.getElementById("name");
+if (nameInput) {
+  nameInput.closest("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("gallery").hidden = false;
+    document.getElementById("gallery-text").hidden = false;
+  });
+}
 
 function openDrawer() {
   document.getElementById("drawer").classList.add("open");

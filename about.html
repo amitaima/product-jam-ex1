@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אודות | אתר אינטרנט</title>
+    <link href="/styles/reset.css" rel="stylesheet" />
+    <link href="/styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <div class="navbar-title"><h2>אתר אינטרנט</h2></div>
+        <div class="navbar-links">
+          <a href="index.html">דף הבית</a>
+          <a href="about.html" class="active">אודות</a>
+          <a href="elements.html">אלמנטים</a>
+        </div>
+        <button class="hamburger" onclick="openDrawer()">
+          <img src="public/icons/menu.svg" />
+        </button>
+      </div>
+    </header>
+
+    <div id="drawer" class="drawer">
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+      <nav class="drawer-nav">
+        <a href="index.html" onclick="closeDrawer()">דף הבית</a>
+        <a href="about.html" onclick="closeDrawer()">אודות</a>
+        <a href="elements.html" onclick="closeDrawer()">אלמנטים</a>
+      </nav>
+    </div>
+
+    <main>
+      <div class="body-container">
+        <div class="top-text">
+          <h2>אודות</h2>
+          <p>קצת עליי</p>
+        </div>
+
+        <div class="profile">
+          <div class="profile-image">
+            <img src="public/my-image.jpeg" alt="תמונה שלי" />
+          </div>
+          <div class="profile-info">
+            <h2>אמיתי מלכה</h2>
+            <p>
+              אני ממורשת שבצפון, סטודנט למדעי המחשב ומט״ר ומפתח תוכנה באמזון.<br />
+              אוהב לבנות דברים, מרעיון ראשוני ועד מוצר שעובד ועוזר לאנשים.<br />
+              <br />
+              אני אוהב לטייל, לגלוש סנובורד ולצלם.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Product Jam 2027</p>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

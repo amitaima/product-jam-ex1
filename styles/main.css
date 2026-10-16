@@ -1,5 +1,29 @@
+:root {
+  --navy: #1e3a5f;
+  --navy-light: #2c5282;
+  --beige: #f5f0e8;
+  --beige-dark: #e8dcc8;
+  --brown: #8b6343;
+  --brown-dark: #3d2b1f;
+  --brown-light: #c8a882;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--brown-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+}
+
 .topnav {
-  background-color: #333;
+  background-color: var(--navy);
   display: flex;
   padding: 0.8rem 1.8rem;
   justify-content: space-between;
@@ -10,9 +34,13 @@
 }
 
 .navbar-title {
-  color: #f2f2f2;
+  color: var(--beige);
   text-align: center;
   font-size: 1rem;
+}
+
+.navbar-title h2 {
+  color: var(--beige);
 }
 
 .navbar-links {
@@ -27,7 +55,7 @@
   padding: 1rem 1.8rem;
   float: right;
   display: block;
-  color: #f2f2f2;
+  color: var(--beige-dark);
   text-align: center;
   text-decoration: none;
   font-size: 17px;
@@ -35,13 +63,13 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #2ca5796d;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #04aa6dcf;
+  background-color: var(--brown);
   color: white;
 }
 
@@ -72,7 +100,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: #c8daf5;
+  background-color: var(--beige-dark);
   z-index: 100;
   flex-direction: column;
   align-items: center;
@@ -91,7 +119,7 @@
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
-  color: #333;
+  color: var(--brown-dark);
 }
 
 .drawer-nav {
@@ -102,7 +130,7 @@
 }
 
 .drawer-nav a {
-  color: #333;
+  color: var(--navy);
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 500;
@@ -115,11 +143,12 @@ main {
 }
 
 .body-container {
-  max-width: 120rem;
+  max-width: 80rem;
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
+  align-items: center;
 }
 
 .top-text {
@@ -132,22 +161,146 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  max-width: 36rem;
+  max-width: 24rem;
+  width: 100%;
 }
 
 .name-input-shit input[type="text"] {
   padding: 0.7rem 1rem;
-  border: 1px solid #ccc;
+  border: 1.5px solid var(--brown-light);
   border-radius: 0.4rem;
   font-size: 1rem;
+  background: white;
+}
+
+.name-input-shit input[type="text"]:focus {
+  outline: none;
+  border-color: var(--navy);
 }
 
 .name-input-shit button[type="submit"] {
   padding: 0.8rem 1.6rem;
-  background-color: #3d5a99;
+  background-color: var(--navy);
   color: white;
   border: none;
   border-radius: 0.4rem;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.name-input-shit button[type="submit"]:hover {
+  background-color: var(--navy-light);
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.gallery[hidden] {
+  display: none;
+}
+
+.gallery .image-border {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(61, 43, 31, 0.15);
+  transition: all 0.3s;
+  background-color: white;
+  border: 1rem solid var(--brown-light);
+  padding: 3rem;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
+}
+.gallery img:hover {
+  transform: scale(1.3);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--navy);
+  color: var(--beige);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ===== ABOUT PAGE ===== */
+.profile {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+}
+
+.profile-image {
+  height: 20rem;
+  background-color: var(--brown-dark);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.interests-list {
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile-image {
+    width: 100%;
+    height: 22rem;
+  }
+}
+
+/* ===== ELEMENTS PAGE ===== */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+fieldset {
+  min-width: 0;
 }
